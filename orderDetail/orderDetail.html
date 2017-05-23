@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云农庄</title>
+    <link rel="stylesheet" href="../common/aui.1.0/aui.css">
+    <link rel="stylesheet" href="../common/aui.1.0/api.css">
+    <link rel="stylesheet" href="../common/aui.1.0/aui-iconfont.css">
+</head>
+<body>
+<!--头部-->
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">订单详情</div>
+    </header>
+<!--内容-->
+    <div class="aui-content">
+        <ul class="aui-list-view">
+            <li class="aui-list-view-cell aui-img">
+                <img class="aui-img-object aui-pull-left img" src="">
+                <div class="aui-img-body">
+                    <span class="goodsName">name</span>
+                    <div>
+                        <p class="aui-pull-left goodsPrice"></p>
+                        <p class="aui-pull-right goodsNum"></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="aui-content">
+        <div class="aui-card">
+            <ul class="aui-list-view">
+                <li class="aui-list-view-cell">
+                    <div>
+                        <span class="aui-pull-left">商品金额 :</span>
+                        <span class="aui-pull-right goodsMoney"></span>
+                    </div>
+                </li>
+                <li class="aui-list-view-cell">
+                    <div>
+                        <span class="aui-pull-left">运费 :</span>
+                        <span class="aui-pull-right deliverMoney"></span>
+                    </div>
+                </li>
+                <li class="aui-list-view-cell">
+                    <div>
+                        <span class="aui-pull-left">应付 :</span>
+                        <span class="aui-pull-right realTotalMoney"></span>
+                    </div>
+                </li>
+                <li class="aui-list-view-cell">
+                    <div>
+                        <span class="aui-pull-left">收货人 :</span>
+                        <span class="aui-pull-right userName"></span>
+                    </div>
+                </li>
+                <li class="aui-list-view-cell">
+                    <div>
+                        <span class="aui-pull-left">电话 :</span>
+                        <span class="aui-pull-right userPhone"></span>
+                    </div>
+                </li>
+                <li class="aui-list-view-cell wuliDiv">
+                    <div>
+                        <span class="aui-pull-left">物流单号 :</span>
+                        <span class="aui-pull-right expressName"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--时间轴-->
+    <div class="aui-content timeLineContent">
+        <ul class="aui-timeline content">
+            <!--<li class="aui-time-label">
+                <span class="aui-bg-info year">
+                2017
+                </span>
+            </li>
+            <li>
+                <div class="aui-time-label aui-bg-info">11-21</div>
+                <div class="aui-timeline-item">
+                    <span class="aui-timeline-time"><i class="aui-iconfont aui-icon-time"></i> 12:05</span>
+                    <h3 class="aui-timeline-header">标题标题标题标题标题</h3>
+                    <div class="aui-timeline-body">时间轴内容时间轴内容时间轴内容时间轴内容时间轴内容</div>
+                </div>
+            </li>
+            <li>
+                <div class="aui-time-label aui-bg-info">11-21</div>
+                <div class="aui-timeline-item">
+                    <span class="aui-timeline-time"><i class="aui-iconfont aui-icon-time"></i> 12:05</span>
+                    <h3 class="aui-timeline-header">标题标题标题标题标题</h3>
+                    <div class="aui-timeline-body">时间轴内容时间轴内容时间轴内容时间轴内容时间轴内容</div>
+                </div>
+            </li>-->
+        </ul>
+        <div class="aui-hide none">
+            暂时没有物流信息
+        </div>
+    </div>
+<!--js-->
+    <script src="../common/jquery.min.js"></script>
+    <script src="../build/orderDetail.min.js"></script>
+</body>
+</html>

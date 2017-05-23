@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云农庄</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../../common/aui.2.0.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/aui-slide.css" /><!--轮播css-->
+</head>
+<body>
+<!--头部-->
+    <header class="aui-bar aui-bar-nav aui-bar-light header">
+        <a class="aui-pull-left aui-btn" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left aui-text-default"></span>
+        </a>
+        <div class="aui-title aui-text-default ">产品详情</div>
+    </header>
+    <div class="empty"></div>
+<!--轮播-->
+    <div id="aui-slide">
+        <div class="aui-slide-wrap slideWarp" >
+            <!--<div class="aui-slide-node bg-dark">
+                <img src="../../img/1.jpg" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../../img/2.jpg" />
+            </div>
+            <div class="aui-slide-node bg-dark">
+                <img src="../../img/3.jpg" />
+            </div>-->
+        </div>
+        <div class="aui-slide-page-wrap"><!--分页容器--></div>
+    </div>
+<!--信息-->
+    <div class="aui-content">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text aui-margin-b-5">
+                            <div class="aui-list-item-title goods_name">name</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            <p class="price"><span class="payment">¥95</span> 每<span class="goodsUnit"></span></p>
+                            <div class="phoneIconContent">
+                                <img src="../../img/phone.png" class="phoneIcon">
+                            </div>
+                        </div>
+                        <div class="aui-list-item-text goodsInfo aui-margin-t-5">
+                            <div class="shopName"></div>
+                        </div>
+                        <div class="aui-list-item-text goodsInfo aui-margin-t-5">
+                            <div>线上成交<span class="sales_sum">2</span>单</div>
+                            <div class="aui-list-item-right store_count"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<!--按钮-->
+   <!-- <div class="aui-content aui-margin-t-10">
+        <div class="aui-bar aui-bar-btn aui-bar-btn-full middleBtn">
+            <div class="aui-bar-btn-item btn number"></div>
+            <div class="aui-bar-btn-item btn intoShop" aui-popup-for="top">商家信息</div>
+        </div>
+    </div>-->
+<!--详情，属性-->
+    <div class="aui-tab aui-margin-t-10 middleBtn" id="tab">
+        <div class="aui-tab-item aui-active detailTitle">详情</div>
+        <div class="aui-tab-item attrs">属性</div>
+    </div>
+<!--详情-->
+    <div class="aui-content aui-margin-b-15 detail"  >
+        <!--商品实时直播-->
+        <ul class="aui-list aui-list-in aui-margin-t-10 video1UL">
+            <li class="aui-list-item listItem">
+                <div class="aui-list-item-title listTitle"><img src="../../img/green.jpg" alt="" class="redBar">商品实时直播</div>
+                <div><div class="aui-btn screenshot" tapmode onclick="openDialog('callback')">截图</div></div>
+            </li>
+        </ul>
+        <video src="http://alhlscdn.lechange.cn/LCO/2M03982PAD01662/0/1/20170221142530/dev_20170221142530_1eqk611gfxn5289p.m3u8"
+               poster="" controls="controls" height="187px" width="100%"  id="video1"
+               x-webkit-airplay="true" webkit-playsinline="true">
+        </video>
+        <!--商品延时摄影-->
+        <ul class="aui-list aui-list-in aui-margin-t-10 video2UL">
+            <li class="aui-list-item listItem">
+                <div class="aui-list-item-title listTitle"><img src="../../img/green.jpg" alt="" class="redBar">商品延时摄影</div>
+            </li>
+        </ul>
+        <video src="http://alhlscdn.lechange.cn/LCO/2M03982PAD01662/0/1/20170221142530/dev_20170221142530_1eqk611gfxn5289p.m3u8"
+               poster=""
+               controls="controls" height="187px" width="100%"  id="video2">
+        </video>
+        <!--商家信息-->
+        <ul class="aui-list aui-list-in aui-margin-t-10">
+            <li class="aui-list-item listItem">
+                <div class="aui-list-item-title listTitle"><img src="../../img/green.jpg" alt="" class="redBar">商家信息</div>
+            </li>
+            <div class="aui-popup-content shopContent">
+                <div class="aui-content shopPopup">
+                    <div class="shop-image">
+                        <img src="" alt="logo" style="width: 100% ;height: 100%" class="logo">
+                    </div>
+                    <div class="shop-info">
+                        <p class="shopNamePopup">华润万家</p>
+                        <p class="shopAddress"></p>
+                        <p class="shopGoodsTotal"></p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+
+        <!--商品详情介绍-->
+        <ul class="aui-list aui-list-in aui-margin-t-10">
+            <li class="aui-list-item listItem">
+                <div class="aui-list-item-title listTitle"><img src="../../img/green.jpg" alt="" class="redBar">商品详情介绍</div>
+            </li>
+        </ul>
+    </div>
+<!--属性-->
+    <div class="aui-content aui-margin-b-15 parameter aui-hide">
+        <ul class="aui-list aui-form-list attrsContent">
+            <!--<li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        Text
+                    </div>
+                    <div class="aui-list-item-input">
+                        info
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+<!--底部订购-->
+    <footer class="aui-bar aui-bar-tab" id="footer">
+         订购
+    </footer>
+
+<!--弹出层-->
+<!--<div class="aui-popup aui-popup-top" id="top">
+    <div class="aui-popup-arrow"></div>
+    <div class="aui-popup-content">
+        <div class="aui-content shopPopup">
+            <div class="shop-image">
+                <img src="" alt="logo" style="width: 100% ;height: 100%" class="logo">
+            </div>
+            <div class="shop-info">
+                <p class="shopNamePopup">华润万家</p>
+                <p class="shopAddress"></p>
+                <p class="shopGoodsTotal"></p>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+<!--js-->
+    <script src="../../common/jquery.min.js"></script>
+    <script src="../../build/Detail.min.js"></script>
+
+</body>
+</html>

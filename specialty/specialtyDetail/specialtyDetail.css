@@ -1,0 +1,10 @@
+body{font-family: "Microsoft YaHei UI";padding-bottom: 50px;}
+/*头部*/
+.header{position: fixed;top:0;z-index: 5;}
+.empty{height: 2.25rem;}
+/*商品内容*/
+.img{height: 87px!important;width: 75px;}
+.aui-list-item-media{display: table-cell;vertical-align:middle;}
+.aui-list-item-text{margin-bottom: 0.2rem;}
+.payment{font-size: 1rem;color: orangered}
+.off{font-size: 0.7rem;color: orangered}

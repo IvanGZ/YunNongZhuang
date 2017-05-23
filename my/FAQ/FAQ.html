@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云农庄</title>
+    <link rel="stylesheet" href="../../common/aui.2.0.css">
+    <style>
+        body{font-family: "Microsoft YaHei UI";padding-bottom: 50px;}
+        /*头部*/
+        .header{position: fixed;top:0;z-index: 5;}
+        .empty{height: 2.25rem;}
+        /*背景*/
+        .text{background-color: white;padding: .5rem;}
+    </style>
+</head>
+<body>
+<!--头部-->
+    <header class="aui-bar aui-bar-nav aui-bar-light header">
+        <a class="aui-pull-left aui-btn" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left aui-text-default"></span>
+        </a>
+        <div class="aui-title aui-text-default ">常见问题</div>
+    </header>
+    <div class="empty"></div>
+<!--内容-->
+    <div class="aui-content aui-padded-t-15">
+        <div class="aui-card-list aui-margin-b-15">
+            <div class="aui-card-list-header">
+               Q：你们产品新鲜吗？
+            </div>
+            <div class="aui-card-list-content-padded aui-border-b aui-border-t">
+                <div class="aui-row">
+                  A：我们的产品是通过收到了会计分录侃大山解放路卡尔文件福利卡萨就
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list aui-margin-b-15">
+            <div class="aui-card-list-header">
+                Q：你们产品新鲜吗？
+            </div>
+            <div class="aui-card-list-content-padded aui-border-b aui-border-t">
+                <div class="aui-row">
+                    A：我们的产品是通过收到了会计分录侃大山解放路卡尔文件福利卡萨就
+                </div>
+            </div>
+        </div>
+    </div>
+<!--js-->
+    <script src="../../common/jquery.min.js"></script>
+    <script src="../../common/api.js"></script>
+    <script>
+        $(document).ready(function () {
+            //获取帮助信息
+            getHelpcenter();
+            function getHelpcenter() {
+                $('.aui-content').empty();
+                var url = 'http://ynz.lekongyun.com/api/Helpcenter';
+                $.get(url,function(data) {
+                    if (data.code == 0) {
+                        var result = data.result;
+                        var listHtml = '';
+                        for (var i in result) {
+                            for (var j in result[i]) {
+                                //list div
+                                listHtml += '<div class="aui-card-list aui-margin-b-15">';
+                                //header
+                                listHtml += '<div class="aui-card-list-header">';
+                                listHtml += result[i][j]['articleTitle'];
+                                listHtml += '</div>';
+                                //content
+                                listHtml += '<div class="aui-card-list-content-padded aui-border-b aui-border-t">';
+                                //row
+                                listHtml += '<div class="aui-row">';
+                                listHtml += result[i][j]['articleContent'];
+                                listHtml += '</div>';
+                                //row end
+                                listHtml += '</div>';
+                                //content end
+                                listHtml += '</div>';
+                                //list end
+                            }
+                        }
+                        $('.aui-content').empty().append(listHtml);
+                        return;
+                    }
+                    alert('帮助内容获取失败!')
+                })
+            }
+        });
+    </script>
+</body>
+</html>

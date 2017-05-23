@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="screen-orientation"content="portrait">
+    <title>云农庄</title>
+    <link rel="stylesheet" href="common/aui.2.0.css">
+    <link rel="stylesheet" href="common/aui-slide.css"><!--轮播-->
+    <script src="common/jquery.min.js"></script>
+    <script src="./build/index.min.js"></script>
+</head>
+<body>
+<!--农产品-->
+    <div class="farmImports">
+        <!--头部-->
+        <header class="aui-bar header">
+            <div class="aui-searchbar" id="search">
+                <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+                    <i class="aui-iconfont aui-icon-search"></i>
+                    <form action="javascript:search();">
+                        <input type="search" placeholder="搜索你想要的农产品" id="search-input">
+                    </form>
+                </div>
+                <div class="aui-searchbar-cancel" tapmod>取消</div>
+            </div>
+        </header>
+        <!--轮播-->
+        <div id="aui-slide" class="slideContent">
+            <div class="aui-slide-wrap slideWarp" >
+                <!--<div class="aui-slide-node bg-dark" id="">
+                    <img src="img/1.jpg" />
+                </div>
+                <div class="aui-slide-node bg-dark" id="">
+                    <img src="img/2.jpg" />
+                </div>
+                <div class="aui-slide-node bg-dark" id="">
+                    <img src="img/3.jpg" />
+                </div>-->
+            </div>
+            <div class="aui-slide-page-wrap"><!--分页容器--></div>
+        </div>
+        <!--宫格导航-->
+        <section class="aui-grid grid">
+            <div class="aui-row content">
+               <!-- <a href="List/List.html">
+                    <div class="aui-col-xs-3">
+                        <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                        <div class="aui-grid-label">水果</div>
+                    </div>
+                </a>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">蔬菜</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">禽畜</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">水产</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">粮油</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">农副</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">农贸</div>
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="img/4.jpg" alt="" style="height: 1.4rem">
+                    <div class="aui-grid-label">更多分类</div>
+                </div>-->
+            </div>
+        </section>
+        <!--种类-->
+        <section class="aui-grid aui-margin-b-10 aui-padded-t-10 newGoods">
+            <div class="aui-row">
+                <div class="aui-col-xs-4 specialty" style="border-right: 1px solid gainsboro">
+                    <img src="img/new.png" alt="名优特产" class="Img1">
+                    <div class="aui-grid-label famousTitle">名优特产</div>
+                </div>
+                <div class="aui-col-xs-8 newProduct">
+                    <div class="aui-pull-left newTitle">新品上市</div>
+                    <img src="img/new1.png" alt="新品上市" class="Img2">
+                </div>
+            </div>
+        </section>
+        <!--资讯列表-->
+        <div class="aui-content zixunContent">
+            <div class="zixun">
+                资讯 :
+            </div>
+            <div class="vticker">
+                <ul class="zixunUL">
+
+                </ul>
+            </div>
+            <!--<div id="gongao">
+                &lt;!&ndash;<div>资讯</div>&ndash;&gt;
+                <div style="width:90%;height:30px;margin:0 auto;white-space: nowrap;overflow:hidden;" id="scroll_div" class="scroll_div">
+                    <div id="scroll_begin">
+
+                    </div>
+                    <div id="scroll_end"></div>
+                </div>
+            </div>-->
+        </div>
+        <div class="aui-content">
+            <ul class="aui-list aui-media-list noticeContent">
+                <!--<a href="article/article.html">
+                    <li class="aui-list-item">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media">
+                                <img src="img/6.jpg">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title">带有媒体的列表二</div>
+                                </div>
+                                <div class="aui-list-item-text aui-pull-right">
+                                    2016-12-4
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </a>-->
+            </ul>
+        </div>
+    </div>
+<!--订单-->
+    <div class="order aui-hide">
+        <div class="aui-tab" id="tab">
+            <div class="aui-tab-item aui-active">全部</div>
+            <div class="aui-tab-item">待发货</div>
+            <div class="aui-tab-item">待收货</div>
+            <div class="aui-tab-item">已完成</div>
+        </div>
+        <div id="tab-content">
+            <div class="page">
+                <ul class="aui-list aui-media-list allOrder">
+                    <!--<li id="" class="aui-list-item aui-padded-l-0 aui-margin-b-15">
+                        <div class="aui-list-item goods">
+                            <div>
+                                <div class="aui-margin-t-10 shopName">华润万家中山路店</div>
+                                <div class="aui-pull-right aui-margin-r-15 aui-margin-t-10 status">配送中</div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item">
+                            <div class="aui-media-list-item-inner goodsList">
+                                <div class="aui-list-item-media">
+                                    <img src="">
+                                </div>
+                                <div class="aui-list-item-inner">
+                                    <div class="aui-list-item-text">
+                                        <div class="aui-list-item-title">泰国榴莲</div>
+                                    </div>
+                                    <div class="aui-list-item-text aui-margin-t-15">
+                                        <div class="aui-list-item-title pay">￥<span>123</span>每斤</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aui-list-item">
+                            <div class="aui-pull-left aui-margin-t-10">订购量 <span class="goodsNum">10</span>斤</div>
+                            <div class="aui-btn aui-btn-info aui-pull-right aui-margin-t-5 aui-margin-r-5 aui-hide confirmBtn">确认收货</div>
+                            <div class="aui-btn aui-btn-info aui-pull-right aui-margin-t-5 aui-margin-r-5 aui-hide toPayBtn">去支付</div>
+                            <div class="aui-pull-right aui-margin-r-15 aui-margin-t-10">共计：<span>￥1230</span></div>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+            <div class="page" style="display: none;">
+                <ul class="aui-list aui-media-list waitDelivery">
+
+                </ul>
+            </div>
+            <div class="page" style="display: none;">
+                <ul class="aui-list aui-media-list waitReceive">
+
+                </ul>
+            </div>
+            <div class="page" style="display: none;">
+                <ul class="aui-list aui-media-list waitAppraise">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--我的-->
+    <div class="mine aui-hide">
+        <section class="aui-content">
+            <div class="aui-card-list headContent">
+                <div class="aui-card-list-content">
+                    <img src="img/bg.png" />
+                </div>
+                <div class="head">
+                    <img src="" class="headImg shadow">
+                    <div class="userName">大法大法</div>
+                </div>
+            </div>
+        </section>
+        <div class="aui-content">
+            <ul class="aui-list ">
+                <li class="aui-list-item aui-list-item-middle personalProfile">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-my myList"></i>
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-title myList">收货地址</div>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-question myList"></i>
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow FAQ">
+                        <div class="aui-list-item-title myList">常见问题</div>
+                    </div>
+                </li>
+                <li class="aui-list-item feedback">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-mail myList"></i>
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-title myList">意见反馈</div>
+                    </div>
+                </li>
+                <li class="aui-list-item about">
+                    <div class="aui-list-item-label-icon">
+                        <i class="aui-iconfont aui-icon-info myList"></i>
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-title myList">关于</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--底部导航-->
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item aui-active" tapmode>
+            <i class="aui-iconfont aui-icon-home"></i>
+            <div class="aui-bar-tab-label">农产品</div>
+        </div>
+        <div class="aui-bar-tab-item orderBack" tapmode>
+            <i class="aui-iconfont aui-icon-menu"></i>
+            <div class="aui-bar-tab-label">订单</div>
+        </div>
+        <div class="aui-bar-tab-item myBack" tapmode>
+            <i class="aui-iconfont aui-icon-my"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+    </footer>
+
+
+    <!--js-->
+</body>
+</html>

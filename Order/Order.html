@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云农庄</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../common/aui.2.0.css" />
+    <style type="text/css">
+        /*加减*/
+        .Spinner{width:100px;margin:0 auto 15px auto;}
+        .Spinner .Amount{width:36px;height:25px;padding:4px 5px;line-height:17px;border-width:1px 0;border-style:solid;border-color:#d9d9d9;float:left;text-align:center;color:#565656;outline:0;}
+        .Spinner a{display:inline-block;width:25px;height:25px;border:1px solid #d9d9d9;background-color:#f7f7f7;float:left;cursor:pointer;outline:0;}
+        .Spinner a i{font-style:normal;background:url(../img/BuynBtn.png) no-repeat;display:block;width:9px;height:9px;margin:8px;text-indent:999999%;overflow:hidden;}
+        .Spinner .Decrease i{background-position:-9px -9px;}
+        .Spinner .Increase i{background-position:-9px -0px;}
+        .Spinner .DisDe i{background-position:-0px -9px;}
+        .Spinner .DisIn i{background-position:-0px -0px;}
+    </style>
+</head>
+<body>
+<!--头部-->
+    <header class="aui-bar aui-bar-nav aui-bar-light header">
+        <a class="aui-pull-left aui-btn" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left aui-text-default"></span>
+        </a>
+        <div class="aui-title aui-text-default ">订单详情</div>
+    </header>
+    <div class="empty"></div>
+<!--信息-->
+    <section class="aui-content">
+        <div class="aui-card-list addressContent">
+            <div class="aui-card-list-header">
+                <span class="aui-margin-l-15">收货人：<span class="userName"></span></span>
+                <span class="userPhone aui-margin-r-15"></span>
+            </div>
+            <div class="aui-card-list-content">
+                <i class="aui-iconfont aui-icon-location aui-text-warning aui-margin-l-15 addressIcon"></i>
+                地址：<span class="userAddress"></span>
+            </div>
+            <img src="../img/bar.png" class="bar">
+        </div>
+    </section>
+<!--订单-->
+    <div class="aui-content order-content">
+        <ul class="aui-list aui-media-list li-content">
+            <li class="aui-list-header orderHeader">
+                <img src="../img/icon.jpg" alt="" class="Icon">
+                <span class="name">多果农产品</span>
+            </li>
+            <li class="aui-list-item goodsList">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media">
+                        <img src="" class="img_url">
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title goods_name"></div>
+                        </div>
+                        <div class="aui-list-item-text aui-margin-t-15">
+                            <div class="aui-list-item-title pay">￥<span class="shopPrice"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<!--订购量，备注-->
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-form-list">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label orderNum">
+                        订购量：
+                    </div>
+                    <div class="aui-list-item-input num">
+                        <div id="a" class="Spinner"></div>
+                        <!--<input class="numInput Appointment" type="text" value="1" maxlength="2" style="ime-mode:disabled" onpaste="return false">-->
+                        <!--<div class="count"><span class="goodsUnit"></span> &nbsp;(库存<span class="goodsStock"></span>)</div>-->
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        运费 :
+                    </div>
+                    <div class="aui-list-item-input freight">
+
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        买家留言:
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" placeholder="选填:对本次交易的说明">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<!--底部-->
+    <footer class="aui-bar aui-bar-tab">
+        <ul class="aui-list aui-list-in ">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner submitContent">
+                    <div>合计：<span class="rmb">￥</span><span class="sum"></span></div>
+                    <div class="aui-btn submit" aui-popup-for="bottom">添加订单</div>
+                </div>
+            </li>
+        </ul>
+    </footer>
+<!--弹出层-->
+    <div class="aui-popup aui-popup-bottom" id="bottom">
+        <div class="aui-popup-arrow"></div>
+        <div class="aui-popup-content">
+            <ul class="aui-list aui-media-list aui-list-noborder">
+                <li class="aui-list-item liTitle">
+                    <!--<img src="../img/weixin.png" class="titleIcon">-->确认付款
+                </li>
+                <li class="aui-list-item money">
+                    ￥
+                </li>
+                <ul class="aui-list aui-list-in aui-list-noborder">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <span class="orderLeft">收款方</span>
+                            <span class=" aui-pull-right orderRight">
+                                云农庄
+                            </span>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <span class="orderLeft">订单信息</span>
+                            <span class=" aui-pull-right orderRight orderInfo">
+
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <li class="aui-list-item lastItem">
+                    <div class="aui-list-item-inner">
+                        <span class="orderLeft">付款方式</span>
+                        <span>
+                            <ul class="aui-list aui-list-in aui-list-noborder">
+                                <li class="aui-list-item">
+                                    <div class="aui-list-item-inner">
+                                    <img src="../img/weixin.png" class="paymentIcon">
+                                        <label for="WeChatPayment" class="aui-list-item-title">微信支付</label>
+                                        <span class=" aui-pull-right">
+                                            <input type="radio" name="payment" id="WeChatPayment" class="aui-radio" checked>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+                <li class="aui-list-item">
+                    <div class="aui-list-item-inner">
+                        <div class=" aui-btn aui-btn-block aui-text-center payMoney payMoneyBefore">正在生成订单...</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--js-->
+    <!--<script src="../common/vconsole.min.js"></script>-->
+    <script src="../common/jquery.min.js"></script>
+    <script type="text/javascript" src="../common/jquery.Spinner.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="../build/Order.min.js"></script>
+</body>
+</html>
