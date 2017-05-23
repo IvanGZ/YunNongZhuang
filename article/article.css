@@ -1,0 +1,4 @@
+body{font-family: "Microsoft YaHei UI";padding-bottom: 50px;background: white}
+/*头部*/
+.header{position: fixed;top:0;z-index: 5;}
+.empty{height: 2.25rem;}

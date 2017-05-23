@@ -1,0 +1,38 @@
+body{font-family: "Microsoft YaHei UI";padding-bottom: 50px;}
+/*头部*/
+.header{position: fixed;top:0;z-index: 5;background: #f8f8f8}
+.empty{height: 2.25rem;}
+.bar{width: 100%;opacity:0.8;}
+.addressIcon{font-size: 20px!important;}
+/*订单*/
+.orderHeader{height: 45px;line-height: 45px!important;font-size: .7rem!important;padding: 0!important;background: white!important;}
+.Icon{float: left;margin: 10px;}
+.goodsList{background: #f5f5f5!important;}
+.pay{color: orangered !important;}
+.img_url{height: 70px!important;width: 75px!important;}
+.Amount{text-shadow: none!important;text-transform: none!important;}
+/*订购数量*/
+.orderNum{width: 3.2rem}
+.num{width: 100px!important;}
+/*底部*/
+.rmb{color: orangered;}
+.submit{color: #ffffff !important;background-color: #9ccc65 !important;height: 44px;line-height: 44px;margin-top: 2px;padding: 0 20px;border-radius: 0}
+.submit:active {color: #ffffff !important;background-color: #9ccc65 !important;}
+.submitContent{padding-right: 0!important;}
+/*弹出层*/
+.aui-popup-content{border-radius: 0!important;}
+.titleIcon{width: 22px;}
+.money{text-align: center;font-size: 1.4rem;font-weight: bold;line-height: 44px;}
+.money:after{height: 0!important;}
+.liTitle{padding: 0!important;text-align: center;font-size: .8rem!important;line-height: 44px!important;}
+#bottom{width: 100%;left:0;bottom: 0;margin-left: 0;}
+.orderLeft{color: #999;}
+.lastItem{padding-bottom: 80px!important;}
+.sum{color: orangered;font-size: 1rem;}
+.goodsPay{color: orangered!important;}
+.paymentIcon{width: 22px;float: left;margin-right: 10px;}
+.payMoneyBefore{background: #e0e0e0;color: #999;}
+.payMoneyBefore:active{background: #e0e0e0;color: #999;}
+.payMoneyAfter{background: #9ccc65;color: white;}
+.payMoneyAfter:active{background: #9ccc65;color: white;}
+

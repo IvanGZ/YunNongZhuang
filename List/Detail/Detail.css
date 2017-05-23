@@ -1,0 +1,41 @@
+body{font-family: "Microsoft YaHei UI";padding-bottom: 50px;}
+/*头部*/
+.header{position: fixed;top:0;z-index: 5;background: #f8f8f8;z-index: 100!important;}
+.empty{height: 2.25rem;}
+.aui-slide-page-wrap{z-index: 99!important;}
+/*商品内容*/
+.price{color: orangered;}
+.payment{font-size: 1.4rem;}
+.goods_name{font-size: 1rem!important;}
+.goodsInfo{font-size: .8rem!important;}
+.shopName{font-size: .8rem!important;}
+.store_count{font-size: .8rem!important;}
+.phoneIconContent{position: relative;}
+.phoneIcon{width: 36px;height: 36px;position: absolute;bottom: 5px;z-index: 1}
+.tel{display: inline-block;width: 36px;height: 36px;position: relative;bottom: 0;z-index: 2;}
+/*打电话，商家信息按钮*/
+.middleBtn{z-index: 4!important;}
+.btn{border-bottom: none;border-top: none;background: white;border-right-color: #a1a1a1;}
+/*详情*/
+.detailTitle{font-size: .8rem}
+.detail img{width: 100%}
+.redBar{width: 5px!important;height: 42px!important;float: left;margin-top: 2px;margin-right: 15px;}
+.listItem{padding: 0!important;}
+.listTitle{line-height: 44px;}
+/*截图*/
+.screenshot{margin-top: 6px;margin-right: 10px;background-color: #9ccc65;color: white;}
+.screenImg{width: 100%}
+.aui-dialog-btn{color: #9ccc65}
+/*商家信息*/
+.shopContent{border-top:1px solid #cfcfcf;border-radius: 0!important;}
+/*#top{width: 100%;left:0;margin-left: 0;}*/
+.shopNamePopup{font-size: .8rem;color: #000}
+.shopAddress, .shopGoodsTotal{color: #999}
+.img{height: 100%}
+.shopPopup{height: 5.5rem;padding: 0.5rem;position: relative}
+.shop-image{width: 4.5rem;height: 3rem;position: absolute;bottom: 1.5rem;left: 1rem;}
+.shop-info{width: 10rem;height: 3rem;position: absolute;bottom: 1.5rem;right: 0.5rem}
+/*底部订购*/
+#footer{padding: .5rem 0 0 0;color: white;background: #9ccc65;z-index: 4}
+/*详情，属性*/
+.aui-tab-item.aui-active{color: #9ccc65;border-bottom: 2px solid #9ccc65; }

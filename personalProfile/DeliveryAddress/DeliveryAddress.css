@@ -1,0 +1,13 @@
+body{padding-bottom: 50px;}
+/*删除按钮*/
+.delSpan{font-size: 16px;}
+/*修改按钮*/
+.changeSpan{font-size: 16px;}
+/*分割线*/
+.li{border-top: 1px #dfdfdf solid;}
+/*底部添加新地址*/
+#footer{padding: .5rem 0 0 0;color: white;background:#9ccc65;z-index: 200}
+/*默认按钮颜色*/
+.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{background-color:#9ccc65;border:#9ccc65}
+/*icon*/
+.addressIcon{font-size: 20px!important;}

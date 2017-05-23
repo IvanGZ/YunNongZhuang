@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云农庄</title>
+    <link rel="stylesheet" href="../common/aui.2.0.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><!--微信js-->
+</head>
+<body>
+    <!--头部-->
+    <header class="aui-bar aui-bar-nav aui-bar-light header">
+        <a class="aui-pull-left aui-btn" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left aui-text-default"></span>
+        </a>
+        <div class="aui-title aui-text-default ">商品列表</div>
+    </header>
+    <div class="empty"></div>
+    <!--分类-->
+    <div class="sort aui-bar aui-bar-tab ">
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-bar-tab-label">地区</div>
+            <select class="select area">
+                <option value="0">全部</option>
+                <!--<option id="">江西</option>-->
+            </select>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-bar-tab-label">品类</div>
+            <select class="select breed">
+                <option value="0">全部</option>
+                <!--<option id="">榴莲</option>-->
+            </select>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-bar-tab-label">成熟度</div>
+            <select class="select maturity">
+                <option value="0">全部</option>
+                <!--<option>开花</option>
+                <option>成熟</option>-->
+            </select>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-bar-tab-label">成熟年份</div>
+            <select class="select month">
+                <option value="0">全部</option>
+                <option id="1">1月</option>
+                <option id="2">2月</option>
+                <option id="3">3月</option>
+                <option id="4">4月</option>
+                <option id="5">5月</option>
+                <option id="6">6月</option>
+                <option id="7">7月</option>
+                <option id="8">8月</option>
+                <option id="9">9月</option>
+                <option id="10">10月</option>
+                <option id="11">11月</option>
+                <option id="12">12月</option>
+            </select>
+        </div>
+        <div class="aui-bar-tab-item" tapmode>
+            <div class="aui-bar-tab-label">综合排序</div>
+            <select class="select order">
+                <option id="assess">评价</option>
+                <option id="money">价格</option>
+            </select>
+        </div>
+    </div>
+    <!--列表-->
+    <div class="aui-content aui-margin-b-15 show">
+        <ul class="aui-list aui-media-list content">
+            <!-- <a href="Detail/Detail.html">
+                 <li class="aui-list-item">
+                     <div class="aui-media-list-item-inner">
+                         <div class="aui-list-item-media">
+                             <img src="" class="img">
+                         </div>
+                         <div class="aui-list-item-inner">
+                             <div class="aui-list-item-text">
+                                 <div class="aui-list-item-title">泰国榴莲5-8斤</div>
+                                 <div>1.5km</div>
+                             </div>
+                             <div class="aui-list-item-text">
+                                 <p class="payment">¥95</p>
+                                 <span class="off">线上成交2单</span>
+                             </div>
+                             <div class="aui-list-item-text">
+                                 <div class="seller_label">
+                                     <div class="aui-label aui-label-success">诚信</div>
+                                 </div>
+                                 <span>广西嵩左市聘祥市</span>
+                                 <span>黄参</span>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             </a>-->
+        </ul>
+        <div class="aui-content aui-hide notFound">
+            <div class="aui-card-list">
+                <div class="aui-card-list-content">
+                    <img src="../img/404.jpeg" />
+                </div>
+                <div class="aui-card-list-header">
+                    <span style="text-align: center">抱歉，没有您搜索的商品</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/jquery.min.js"></script>
+    <script src="../build/List.min.js"></script>
+</body>
+</html>

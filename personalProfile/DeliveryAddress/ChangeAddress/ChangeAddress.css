@@ -1,0 +1,5 @@
+body{padding-bottom: 50px;}
+/*默认按钮*/
+.default{width: 60px!important;}
+/*底部确认修改按钮*/
+#footer{padding: .5rem 0 0 0;color: white;background:#9ccc65;z-index: 200}

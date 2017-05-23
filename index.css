@@ -1,0 +1,57 @@
+body{font-family: "Microsoft YaHei UI";padding-bottom: 70px;}
+/*搜索条*/
+.aui-searchbar{background-color: #9ccc65;color: #9ccc65}
+/*农产品*/
+.farmImports .header{position: fixed;top: 0;z-index: 10000!important;}
+.farmImports .slideContent{margin-top: 44px;}
+.farmImports .Img1{width: 3rem;height: 3rem}
+.farmImports .Img2{width: 4.5rem;height: 4.5rem}
+.farmImports .newGoods div{padding: 0 !important;}
+/*名优特产*/
+.newGoods{border-top: 1px solid #dadada;}
+.newTitle{margin: 15% 0 0 15%}
+/*资讯*/
+.zixunContent{height: 30px!important;}
+.zixun{width: 18%;display: inline-block;float: left;height: 30px;line-height: 30px;background: #ffffff;padding-left: 15px;}
+.vticker {width: 82%;display:inline-block;background: #ffffff;color: #7ccf50;font-weight:bold;line-height: 30px!important;}
+.vticker ul {padding: 0;}
+.vticker li {list-style: none;padding-left: 30px;overflow:hidden;line-height:30px;font-size:16px;}
+.noticeContent .aui-list-item:after{height: 1px!important;}
+/*.titleDiv{margin: 0 auto;}*/
+/*我的*/
+.headContent{position: relative;margin: 0}
+.head{position: absolute;top: 35px;width: 100%;text-align: center;color: white}
+.headImg{width: 80px;height: 80px;border-radius: 50%}
+.shadow {
+    -moz-box-shadow: 0 0 30px white;
+    -webkit-box-shadow: 0 0 30px white;
+    box-shadow: 0 0 30px white;
+    z-index: 99;
+
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+
+    border: 4px solid;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.userName{color: white;font-size: .8rem;}
+.myList{color: #666!important;}
+/*底部*/
+.aui-bar-tab .aui-active{color: #9ccc65}
+#footer{border-top: 1px solid #dadada}
+/*订单tab*/
+.aui-tab-item.aui-active{color: #9ccc65;border-bottom:2px solid #9ccc65!important;}
+.order img{height: 75px!important;width: 63px;}
+.order .aui-list-item-media{display: table-cell;vertical-align:middle;}
+.confirmBtn , .toPayBtn{background-color: #ff6600!important;color: white}
+.cancelOrder{color: #ff6600;}
+.closeOrder{color: #ff6600;}
+.aui-btn-outlined{border-color: #ff6600!important;}
+.shopName{color: black;display: inline-block}
+.status{color: #ff6600}
+.pay{color: #ff6600!important;font-size: 1rem}
+.orderNum{color: #999;}
+.sum{color: #ff6600}
+.aui-mask-in{z-index: 101}
+.aui-tab-item.aui-active{z-index: 10;}

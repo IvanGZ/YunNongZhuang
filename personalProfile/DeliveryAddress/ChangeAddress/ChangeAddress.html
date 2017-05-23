@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>云农庄</title>
+    <link rel="stylesheet" href="../../../common/aui.2.0.css">
+</head>
+<body>
+<!--头部-->
+    <header class="aui-bar aui-bar-nav aui-bar-light">
+        <a class="aui-pull-left aui-btn" onclick="JavaScript:window.history.back()">
+            <span class="aui-iconfont aui-icon-left aui-text-default"></span>
+        </a>
+        <div class="aui-title headerTitle aui-text-default">修改收货地址</div>
+    </header>
+<!--个人资料-->
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-form-list">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        收货人
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="text" class="name">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        联系电话
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="number" class="phone">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label">
+                        详细地址
+                    </div>
+                    <div class="aui-list-item-input">
+                        <textarea class="address"></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<!--底部添加新地址-->
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        确认修改
+    </footer>
+<!--js-->
+    <script src="../../../common/jquery.min.js"></script>
+    <script src="../../../build/ChangeAddress.min.js"></script>
+</body>
+</html>
